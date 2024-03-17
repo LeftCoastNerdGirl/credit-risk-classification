@@ -21,21 +21,15 @@ The target for the prediction is the 'loan_status'. The model will be trained us
 
 * Confusion matrix
 
-                        Healthy Loan (Predicted)    High-Risk Loan (Predicted)
-Healthy Loan (Actual)             18663                          102
-High-Risk Loan (Actual)              56                          563
+<img width="502" alt="Screenshot 2024-03-16 at 6 47 02 PM" src="https://github.com/LeftCoastNerdGirl/credit-risk-classification/assets/145019579/0b3fdac4-6e31-47a5-a14f-41dfaa2514c0">
+
 
 
 * Out of 18,765 loan statuses classified as healthy, the model predicted 18,663 as healthy and 102 as high risk, which is a very good accuracy rate. For the 619 loans that were actualy high risk, the model predicted 563 correctly and 56 in error. While the rate of false positives for the high risk loans was lower, it should be noted that the sample was extremely biased toward heathly loans - 18,765 healthy loans vs 563 high risk loans, so the model trained with this bias, as shown by the significantly higher accuracy for the healthy loans.
 
 * Classification report
 
-                precision    recall  f1-score   support
-
-  Healthy Loan       1.00      0.99      1.00     18765
-High-Risk Loan       0.85      0.91      0.88       619
-
-      accuracy                           0.99     19384
+  <img width="486" alt="Screenshot 2024-03-16 at 6 47 14 PM" src="https://github.com/LeftCoastNerdGirl/credit-risk-classification/assets/145019579/147b4f2d-3a57-4f59-86b0-850a1f2d7514">
 
 
 * Accuracy score
