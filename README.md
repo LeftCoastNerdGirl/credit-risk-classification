@@ -2,24 +2,24 @@
 
 ## Overview of the Analysis
 
-The purpose of this analysis is to use historical lending data to build a machine learning model that predicts risk of loan default, grouping potential borrowers into groups predicted to be 'Healthy Loans' or 'High-Risk Loans'.
-The data includes details of load size and total debt, interest rate, borrower's income and debt to income ratio, as well as number of accounts and any derogatory marks on the accounts.
-The target for the prediction is the 'loan_status'. The model will be trained using the remaining variables, then tested to see if it has learned how to use those variables to predict a healthy or high risk loan.
+The purpose of this analysis is to use historical lending data to build a machine learning model that predicts risk of loan default, grouping potential borrowers into groups predicted to be 'Healthy Loans' or 'High-Risk Loans'.  
+The data includes details of load size and total debt, interest rate, borrower's income and debt to income ratio, as well as number of accounts and any derogatory marks on the accounts.  
+The target for the prediction is the 'loan_status'. The model will be trained using the remaining variables, then tested to see if it has learned how to use those variables to predict a healthy or high risk loan.  
 
 
 ## Overview of the Analysis
-
-* Imported the csv data file using Pandas and formatted as a data frame.
-* Separated the loan status as the y variable and the remainder of the data points as the X variable.
-* Used the sklearn train_test_split function to divide the data set into one group of train data to train the model and a second set of data to test the accuracy of the model's ability to predict. 
-* Imported LogisticRegression from sklearn to create the model.
-* Trained the model. 
-* Used the confusion matrix and classification report tools imported from sklearn to validate the accuracy of the model.
+ 
+* Imported the csv data file using Pandas and formatted as a data frame.  
+* Separated the loan status as the y variable and the remainder of the data points as the X variable.  
+* Used the sklearn train_test_split function to divide the data set into one group of train data to train the model and a second set of data to test the accuracy of the model's ability to predict.  
+* Imported LogisticRegression from sklearn to create the model.  
+* Trained the model.  
+* Used the confusion matrix and classification report tools imported from sklearn to validate the accuracy of the model.  
 
  
 ## Results
 
-* Confusion matrix
+* Confusion matrix  
 
 <img width="502" alt="Screenshot 2024-03-16 at 6 47 02 PM" src="https://github.com/LeftCoastNerdGirl/credit-risk-classification/assets/145019579/0b3fdac4-6e31-47a5-a14f-41dfaa2514c0">
 
@@ -46,11 +46,11 @@ The recall score for high risk loans is lower at 91%, but is still a good result
 
 ## Summary
 
-The classification report indicates a high accuracy rate, precision, and recall for identifying healthy loans. The model performs well in correctly predicting both true positives and true negatives for healthy loans, while also effectively minimizing false positives, indicating its proficiency in distinguishing healthy loans from the rest.
+The classification report indicates a high accuracy rate, precision, and recall for identifying healthy loans. The model performs well in correctly predicting both true positives and true negatives for healthy loans, while also effectively minimizing false positives, indicating its proficiency in distinguishing healthy loans from the rest.  
 The precision score for high-risk loans is 85%, indicating that when the model predicts a loan as high risk, it is accurate 85% of the time. This suggests that the model performs well in minimizing false positives, where healthy loans are incorrectly labeled as high risk. The recall score for high-risk loans is 91%, indicating that the model correctly identifies 91% of actual high-risk loans. This implies the model's effectiveness in capturing most high-risk loans, though it may still miss some (false negatives).
 
-Recommendation
+# Recommendation
 
-The model demonstrates remarkable success in predicting healthy loans. This is evidenced by the fact that nearly 97% of the loans within the dataset are classified as healthy. This abundance of healthy instances in the dataset contributes to the model's robust accuracy in identifying them. The model's proficiency in recognizing healthy loans aligns with the dataset's composition, reflecting its strong performance in this specific classification task.
-The model's performance in identifying high-risk loans is hindered by the scarcity of such instances in the training dataset. With a precision score of 85%, it means that 15% of borrowers are incorrectly labeled as healthy, posing a potential risk for lenders. This misclassification could lead to unintended consequences, including financial losses or increased default rates. Additionally, the model's recall score of 91% indicates that it accurately identifies 91% of actual high-risk loans. However, the 9% of loans falsely classified as high risk may lead to missed opportunities for growth, as deserving borrowers could be unfairly denied loans. Balancing the need to mitigate risks with the potential for missed opportunities is crucial for optimizing lending decisions and ensuring responsible financial practices
-Considering the risks associated with lower accuracy rates in predicting high-risk loans, I propose leveraging the model to evaluate a dataset featuring a more balanced ratio between healthy loans and high-risk loans. By exposing the model to a diverse range of loan types, we can enhance its ability to accurately identify high-risk borrowers. This approach not only fosters a more comprehensive understanding of the lending landscape but also strengthens the model's predictive capabilities, thereby enabling more informed decision-making and risk mitigation strategies for lenders.
+The model demonstrates remarkable success in predicting healthy loans. This is evidenced by the fact that nearly 97% of the loans within the dataset are classified as healthy. This abundance of healthy instances in the dataset contributes to the model's robust accuracy in identifying them. The model's proficiency in recognizing healthy loans aligns with the dataset's composition, reflecting its strong performance in this specific classification task.  
+The model's performance in identifying high-risk loans is hindered by the scarcity of such instances in the training dataset. With a precision score of 85%, it means that 15% of borrowers are incorrectly labeled as healthy, posing a potential risk for lenders. This misclassification could lead to unintended consequences, including financial losses or increased default rates. Additionally, the model's recall score of 91% indicates that it accurately identifies 91% of actual high-risk loans. However, the 9% of loans falsely classified as high risk may lead to missed opportunities for growth, as deserving borrowers could be unfairly denied loans. Balancing the need to mitigate risks with the potential for missed opportunities is crucial for optimizing lending decisions and ensuring responsible financial practices.  
+Considering the risks associated with lower accuracy rates in predicting high-risk loans, I propose leveraging the model to evaluate a dataset featuring a more balanced ratio between healthy loans and high-risk loans. By exposing the model to a diverse range of loan types, we can enhance its ability to accurately identify high-risk borrowers. This approach not only fosters a more comprehensive understanding of the lending landscape but also strengthens the model's predictive capabilities, thereby enabling more informed decision-making and risk mitigation strategies for lenders.  
