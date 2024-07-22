@@ -1,4 +1,4 @@
-# Credit Risk Classification Challenge, Module 20
+# Credit Risk Classification using scikit-learn
 
 ## Overview of the Analysis
 
